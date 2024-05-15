@@ -41,11 +41,16 @@ def obtener_subcarpetas(directorio):
     return subcarpetas
 
 # Usar la función
-directorio_principal = "/media/VARIOS"
-subcarpetas = obtener_subcarpetas(directorio_principal)
+directorio_principal = "/media/SERIES"
+one_folder = False
 
-# Ahora puedes recorrer la lista de subcarpetas para realizar operaciones adicionales
-for subcarpeta in subcarpetas:
-    # directorio_principal = "/media/VARIOS/theLastOfUs" # Ruta a la carpeta principal
-    renombrar_archivos_serie(subcarpeta)
-    # print(f'{subcarpeta}')
+### One folder
+if one_folder:
+    renombrar_archivos_serie(directorio_principal)
+
+### multiple folders
+else:
+    subcarpetas = obtener_subcarpetas(directorio_principal)
+    for subcarpeta in subcarpetas:
+        renombrar_archivos_serie(subcarpeta)
+
