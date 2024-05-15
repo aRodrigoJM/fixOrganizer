@@ -41,7 +41,7 @@ def obtener_subcarpetas(directorio):
     return subcarpetas
 
 # Usar la función
-directorio_principal = "/media/SERIES"
+directorio_principal = "/media/VARIOS"
 one_folder = False
 
 ### One folder
